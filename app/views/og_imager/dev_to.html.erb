@@ -1,0 +1,88 @@
+<div class="container">
+  <div class="card">
+    <h1 class="title">
+      <%= @title %>
+    </h1>
+    <div class="details">
+      <div class="user">
+        <img src="<%= @avatar %>" class="avatar">
+        <p class="username">
+          <%= @username %> - <%= @timestamp %>
+        </p>
+      </div>
+      <div class="logos">
+        <% @logos.each do |logo| %>
+          <img src="<%= logo %>" class="logo">
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+  *{
+    font-family: 'Roboto', sans-serif;
+    color: #cd685f;
+  }
+
+  .container{
+    width: 1128px;
+    height: 600px;
+    display: flex;
+  }
+
+  .card{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 2.8rem 4rem 4rem 2.8rem;
+    border: 3px solid #c56b61;
+    border-radius: 25px 25px 0px 0px;
+    box-shadow: 7px 10px 0px 1px #c56b61;
+    padding: 3.8rem 1.8rem 1.8rem 1.8rem;
+  }
+
+  .title{
+    margin: 0px;
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 80px;
+  }
+
+  .details{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .user{
+    display: flex;
+    align-items: center;
+  }
+
+  .avatar{
+    border: 3px solid #c56b61;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .username{
+    margin: 0;
+    font-size: 2.5rem;
+  }
+
+  .logos{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo{
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    transform: rotate(5deg);
+  }
+</style>
