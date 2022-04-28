@@ -1,4 +1,5 @@
 class OgImagerController < ApplicationController
+  
   # GET /og_imager/dev_to
   # @param {string} title
   # @param {string} avatar
